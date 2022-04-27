@@ -31,7 +31,11 @@ python -u main.py \
 --config configs/two_branch_cam_loc_dir.yaml
 ```
 
-## Post-Processing
+## Inference
+Run `python test.py --config configs/two_branch_cam_loc_dir.yaml --save-name "tb_model"` to get test features.
+
+
+## Post-Processing & Submit
 Run `scripts/get_sumbmit.py` to get submitted file, post-processing is added by default.
 
 
