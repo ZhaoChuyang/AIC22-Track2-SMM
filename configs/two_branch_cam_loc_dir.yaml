@@ -1,0 +1,35 @@
+DATA:
+  USE_MOTION: True
+  CITYFLOW_PATH: /data/datasets/aicity2022/track2
+  TRAIN_JSON_PATH: data/train_tracks_nlpaug.json
+  EVAL_JSON_PATH: data/val_nlpaug.json
+  SIZE: 320
+  DATASET: "motion"
+  MOTION_PATH: data/motion_iou_0.05
+
+MODEL:
+  NAME: "two-branch"
+  BERT_TYPE: "ROBERTA"
+  BERT_NAME: "roberta-large"
+  car_idloss: False
+  mo_idloss: False
+  share_idloss: False
+  camera_idloss: False
+  direction_loss: False
+  location_loss: False
+  IMG_ENCODER: "resnet101_ibn_a"
+
+TRAIN:
+  BATCH_SIZE: 40
+  ONE_EPOCH_REPEAT: 1
+  EPOCH: 400
+  EVAL_PERIOD: 15
+  NUM_WORKERS: 4
+  LR:
+    WARMUP_EPOCH: 60
+    DELAY: 100
+    BASE_LR: 3e-4
+
+TEST:
+  QUERY_JSON_PATH: 'data/test_queries_nlpaug.json'
+  RESTORE_FROM: 'two_branch_dir_loc/checkpoint_best_eval.pth'
