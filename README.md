@@ -1,6 +1,6 @@
 # Symmetric Network with Spatial Relationship Modeling for Natural Language-based Vehicle Retrieval
 
-The 4nd place solution for AICity2022 Challenge track2: Natural Language-Based Vehicle Retrieval.
+Solution for AICity2022 Challenge track2: Natural Language-Based Vehicle Retrieval.
 
 ![framework](https://raw.githubusercontent.com/hbchen121/AICITY2022_Track2_SSM/master/imgs/framework.png)
 
